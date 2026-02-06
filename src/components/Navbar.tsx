@@ -42,7 +42,7 @@ const Navbar = () => {
                         Home
                     </Link>
                     <Link
-                        href="/#how-it-works"
+                        href="/about-us"
                         className="text-sm font-medium hover:text-black/70 transition-colors"
                     >
                         About
@@ -83,7 +83,7 @@ const Navbar = () => {
                     <Link href="/#home" className="text-base font-medium" onClick={() => setMobileMenuOpen(false)}>
                         Home
                     </Link>
-                    <Link href="/#how-it-works" className="text-base font-medium" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href="/about-us" className="text-base font-medium" onClick={() => setMobileMenuOpen(false)}>
                         About
                     </Link>
                     <Link href="/#faq" className="text-base font-medium" onClick={() => setMobileMenuOpen(false)}>
