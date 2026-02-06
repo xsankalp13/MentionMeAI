@@ -1,0 +1,22 @@
+# MentionMeAI
+
+> Get your brand mentioned by Perplexity, ChatGPT, and Gemini.
+
+MentionMeAI is a specialized agency focused on **Generative Engine Optimization (GEO)** and **AI SEO**. We help brands optimize their content to be cited and recommended by Large Language Models (LLMs) and AI search engines.
+
+## Core Services
+
+*   **LLM Visibility Audit**: Analyzing brand presence across major AI models.
+*   **Answer Engine Optimization (AEO)**: Optimizing content for direct answers.
+*   **AI Content Structuring**: formatting content for machine readability.
+
+## Navigation
+
+*   [Home](https://mentionmeai.com/) - Main landing page.
+*   [Blog](https://mentionmeai.com/blog) - Insights and strategies on AI SEO.
+*   [Book a Call](https://mentionmeai.com/#book-meet) - Schedule a consultation.
+
+## Contact
+
+*   Sales: sales@mentionmeai.com
+*   Support: support@mentionmeai.com

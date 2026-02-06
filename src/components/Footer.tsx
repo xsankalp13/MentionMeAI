@@ -36,7 +36,13 @@ const Footer = () => {
                         Socials
                     </h4>
                     <div className="flex gap-4 text-gray-500">
-                        <a href="#" className="hover:text-pink-400 transition-colors">
+                        <a
+                            href="https://www.instagram.com/mentionmeai/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-pink-400 transition-colors"
+                            aria-label="Instagram"
+                        >
                             <Instagram size={20} />
                         </a>
                         <a href="#" className="hover:text-red-500 transition-colors">

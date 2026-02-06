@@ -6,6 +6,7 @@ import { Calendar, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import BlogPostSchema from '@/components/BlogPostSchema';
 
 type PageProps = {
     params: Promise<{
@@ -42,11 +43,15 @@ export default async function Page({ params }: PageProps) {
 
     // Extract metadata
     // @ts-ignore
-    const title = post.properties.Title?.title[0]?.plain_text || post.properties.Name?.title[0]?.plain_text || "Untitled Post"
+    const title = post.properties.Title?.title[0]?.plain_text || "Untitled Post"
     // @ts-ignore
     const date = post.properties.Date?.date?.start || post.properties.date?.date?.start || post.created_time
     // @ts-ignore
     const coverUrl = post.cover?.external?.url || post.cover?.file?.url || null
+    // @ts-ignore
+    const description = post.properties.Description?.rich_text[0]?.plain_text || post.properties.description?.rich_text[0]?.plain_text || "Read this article on MentionMeAI."
+    // @ts-ignore
+    const author = post.properties.Author?.rich_text[0]?.plain_text || post.properties.author?.rich_text[0]?.plain_text || "MentionMeAI Team"
 
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
         weekday: 'long',
@@ -57,6 +62,15 @@ export default async function Page({ params }: PageProps) {
 
     return (
         <div className="flex flex-col min-h-screen">
+            <BlogPostSchema
+                headline={title}
+                description={description}
+                publishedTime={date}
+                modifiedTime={post.last_edited_time}
+                url={`https://mentionmeai.com/blog/${slug}`}
+                image={coverUrl || "https://mentionmeai.com/logo.png"}
+                author={author}
+            />
             <Navbar />
             <div className="bg-[#FDFCF8] py-24 md:py-32 flex-1">
                 <main className="w-full max-w-4xl mx-auto px-6 animate-in fade-in duration-700 slide-in-from-bottom-4">

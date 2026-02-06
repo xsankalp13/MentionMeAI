@@ -9,7 +9,7 @@ interface BlogCardProps {
 
 export function BlogCard({ post }: BlogCardProps) {
     // Extract data safely - checking both capitalized and lowercase variants to be safe
-    const title = post.properties.Title?.title[0]?.plain_text || post.properties.Name?.title[0]?.plain_text || "Untitled Post";
+    const title = post.properties.Title?.title[0]?.plain_text || "Untitled Post";
     // User confirmed "slug" property in notion.ts is lowercase "slug"
     const slug = post.properties.slug?.rich_text[0]?.plain_text || post.properties.Slug?.rich_text[0]?.plain_text || post.id;
     const description = post.properties.Description?.rich_text[0]?.plain_text || post.properties.description?.rich_text[0]?.plain_text || "No description available.";

@@ -29,7 +29,6 @@ export function BlogList({ initialPosts }: BlogListProps) {
         const filtered = initialPosts.filter((post) => {
             const title = (
                 post.properties.Title?.title[0]?.plain_text ||
-                post.properties.Name?.title[0]?.plain_text ||
                 ""
             ).toLowerCase();
             const description = (
